@@ -8,13 +8,13 @@ function App() {
 
   const { register, handleSubmit, formState: { errors }, watch } = useForm<any>()
 
-  const focusName = useRef<HTMLInputElement | null>(null)
+  /* const focusName = useRef(null)
 
   useEffect(() => {
     if (focusName.current) {
       focusName.current.focus();
     }
-  }, []);
+  }, []); */
 
 
   const regExp = {
@@ -42,10 +42,11 @@ function App() {
           {...register("name", { required: true, pattern: regExp.name })}
           name='name'
           placeholder='Name'
-          ref={focusName}
+          autoFocus
           className={`w-full border-1 border-gray-400 p-3 rounded-[6px] mb-2.5
- border ${errors.name ? "border-red-500" : "border-gray-300"}`}
-        /> <br />
+            border ${errors.name ? "border-red-500" : "border-gray-300"}`}
+/*             ref={focusName}
+ */        /> <br />
 
 
         <input
