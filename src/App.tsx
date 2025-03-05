@@ -8,7 +8,7 @@ function App() {
 
   const { register, handleSubmit, formState: { errors }, watch } = useForm<any>()
 
-  const focusName = useRef(null)
+  const focusName = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {
     if (focusName.current) {
