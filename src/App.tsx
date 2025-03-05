@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
 
-  const { register, handleSubmit, formState: { errors }, watch } = useForm<any>()
+  const { register, handleSubmit, formState: { errors }, watch, reset } = useForm<any>()
 
   /* const focusName = useRef(null)
 
@@ -28,7 +28,7 @@ function App() {
 
   const onSubmit = (data: any) => {
     console.log(data)
-
+    reset()
   }
   return (
 
